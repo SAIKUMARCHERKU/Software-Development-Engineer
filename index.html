@@ -7,10 +7,10 @@
 <meta content="#07111d" name="theme-color"/>
 <meta content="Saikumar Cherku — Full Stack Engineer building polished frontend experiences, powerful backends, and thoughtful digital products." name="description"/>
 <title>Saikumar Cherku | Full Stack Engineer</title>
-<link href="assets/web-favicon.svg" rel="icon" type="image/svg+xml"/>
+<link rel="icon" type="image/svg+xml" href="assets/sk-favicon.svg"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.179.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--bg:#f9f9f7;--surface:#fff;--ink:#182320;--muted:#67716c;--stroke:#e2e6e2;--accent:#31594c;--soft:#e9eee9;--stone:#f1f1ed;--shadow:0 22px 80px -45px rgba(18,36,27,.25);--w:1170px;--sans:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--heading:'Manrope',var(--sans)}
 *,*::before,*::after{box-sizing:border-box}
@@ -710,13 +710,27 @@ kbd{font:inherit;background:#ffffff25;border-radius:4px;padding:1px 4px}
 .mode-creative .mode-option:hover{background:#f1ebe1!important;border-color:#ddd4c6!important}
 .mode-creative .mode-option[aria-pressed=true]{background:#e5e9e2!important;border-color:#b3c7bb!important}
 @media(max-width:700px){.mode-creative .nav-links{border-color:#d9d2c7!important}.mode-creative .hero{padding-top:92px!important}.mode-picker .mode-current{display:none!important}.mode-creative .creative-dock .dock-hint{display:none!important}.mode-creative .creative-dock{bottom:12px!important;gap:8px!important;padding:6px 8px 6px 12px!important}.mode-creative .creative-dock button{padding:9px 11px!important}.mode-creative .creative-prompt{margin-bottom:30px!important}}
+
+/* Custom SK identity: header mark matches the browser favicon across all modes. */
+.brand-icon {
+  display:block;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  object-fit:contain;
+  border-radius:11px;
+  box-shadow:0 4px 15px rgba(2,12,23,.16);
+}
+@media(max-width:430px) {
+  .brand-icon {width:32px;height:32px;flex-basis:32px;border-radius:8px;}
+}
 </style>
 <meta content="light dark" name="color-scheme"/></head>
 <body><a class="skip-link" href="#work">Skip to projects</a>
 <div aria-hidden="true" id="progress-line"></div><canvas aria-hidden="true" id="web-canvas"></canvas><canvas aria-hidden="true" id="play-canvas"></canvas><div aria-hidden="true" class="code-cursor" id="code-cursor"><span class="cursor-brackets">&lt;/&gt;</span><span class="cursor-label">const ideas = true;</span></div>
 <div aria-hidden="true" class="mode-transition" id="mode-transition"><div class="transition-ring"></div><div class="transition-copy"><span class="transition-kicker">ALTERNATE REALITY // 02</span><strong>WELCOME TO<br/>MY SPIDEY SIDE.</strong><small>STAY CURIOUS. BUILD DIFFERENT.</small></div></div>
 <header><div class="container navbar">
-<a aria-label="Saikumar Cherku home" class="logo" href="#top"><span class="logo-mark"><svg aria-hidden="true" fill="none" height="27" viewbox="0 0 42 42" width="27"><path d="M21 3v36M3 21h36M8 8l26 26M34 8 8 34" opacity=".6" stroke="currentColor" stroke-width="1.2"></path><path d="M21 11 29 19 21 32 13 19Z" fill="currentColor" opacity=".95"></path><circle cx="21" cy="21" fill="#0c1725" r="4"></circle></svg></span> Saikumar Cherku</a>
+<a aria-label="Saikumar Cherku home" class="logo" href="#top"><img class="brand-icon" src="assets/sk-favicon.svg" alt="" width="44" height="44" decoding="async"/> Saikumar Cherku</a>
 <div aria-label="Portfolio appearance controls" class="mode-picker">
 <span class="mode-current" id="mode-current">Classic</span>
 <button aria-controls="mode-menu" aria-expanded="false" aria-haspopup="true" class="mode-choice change-mode-button" id="change-mode" type="button"><span aria-hidden="true" class="bolt">✦</span><span>Change Mode</span><span aria-hidden="true">⌄</span></button>
