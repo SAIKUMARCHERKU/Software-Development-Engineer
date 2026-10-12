@@ -711,18 +711,43 @@ kbd{font:inherit;background:#ffffff25;border-radius:4px;padding:1px 4px}
 .mode-creative .mode-option[aria-pressed=true]{background:#e5e9e2!important;border-color:#b3c7bb!important}
 @media(max-width:700px){.mode-creative .nav-links{border-color:#d9d2c7!important}.mode-creative .hero{padding-top:92px!important}.mode-picker .mode-current{display:none!important}.mode-creative .creative-dock .dock-hint{display:none!important}.mode-creative .creative-dock{bottom:12px!important;gap:8px!important;padding:6px 8px 6px 12px!important}.mode-creative .creative-dock button{padding:9px 11px!important}.mode-creative .creative-prompt{margin-bottom:30px!important}}
 
-/* Custom SK identity: header mark matches the browser favicon across all modes. */
-.brand-icon {
-  display:block;
+/* Header identity follows the active portfolio theme.
+   The browser-tab favicon stays the original {SK} mark. */
+.brand-emblem {
+  position:relative;
+  display:inline-block;
   width:44px;
   height:44px;
   flex:0 0 44px;
+  isolation:isolate;
+}
+.brand-emblem .brand-icon {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
   object-fit:contain;
   border-radius:11px;
-  box-shadow:0 4px 15px rgba(2,12,23,.16);
+  opacity:0;
+  transform:scale(.88) rotate(-8deg);
+  transition:opacity .25s ease, transform .35s cubic-bezier(.2,.7,.2,1);
+  pointer-events:none;
 }
+.mode-regular .brand-classic,
+.mode-creative .brand-creative,
+.mode-spicy .brand-spidey {
+  opacity:1;
+  transform:scale(1) rotate(0deg);
+}
+.mode-creative .brand-creative {transform:rotate(-3deg)}
+.mode-spicy .brand-spidey {filter:drop-shadow(0 0 7px rgba(246,57,84,.28))}
 @media(max-width:430px) {
-  .brand-icon {width:32px;height:32px;flex-basis:32px;border-radius:8px;}
+  .brand-emblem {width:32px;height:32px;flex-basis:32px;}
+  .brand-emblem .brand-icon {border-radius:8px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .brand-emblem .brand-icon {transition:none!important;}
 }
 </style>
 <meta content="light dark" name="color-scheme"/></head>
@@ -730,7 +755,7 @@ kbd{font:inherit;background:#ffffff25;border-radius:4px;padding:1px 4px}
 <div aria-hidden="true" id="progress-line"></div><canvas aria-hidden="true" id="web-canvas"></canvas><canvas aria-hidden="true" id="play-canvas"></canvas><div aria-hidden="true" class="code-cursor" id="code-cursor"><span class="cursor-brackets">&lt;/&gt;</span><span class="cursor-label">const ideas = true;</span></div>
 <div aria-hidden="true" class="mode-transition" id="mode-transition"><div class="transition-ring"></div><div class="transition-copy"><span class="transition-kicker">ALTERNATE REALITY // 02</span><strong>WELCOME TO<br/>MY SPIDEY SIDE.</strong><small>STAY CURIOUS. BUILD DIFFERENT.</small></div></div>
 <header><div class="container navbar">
-<a aria-label="Saikumar Cherku home" class="logo" href="#top"><img class="brand-icon" src="assets/sk-favicon.svg" alt="" width="44" height="44" decoding="async"/> Saikumar Cherku</a>
+<a aria-label="Saikumar Cherku home" class="logo" href="#top"><span class="brand-emblem" aria-hidden="true"><img class="brand-icon brand-classic" src="assets/sk-favicon.svg" alt="" width="44" height="44"/><img class="brand-icon brand-creative" src="assets/sk-creative.svg" alt="" width="44" height="44"/><img class="brand-icon brand-spidey" src="assets/sk-spidey.svg" alt="" width="44" height="44"/></span> Saikumar Cherku</a>
 <div aria-label="Portfolio appearance controls" class="mode-picker">
 <span class="mode-current" id="mode-current">Classic</span>
 <button aria-controls="mode-menu" aria-expanded="false" aria-haspopup="true" class="mode-choice change-mode-button" id="change-mode" type="button"><span aria-hidden="true" class="bolt">✦</span><span>Change Mode</span><span aria-hidden="true">⌄</span></button>
