@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="SK creative monogram">
+<rect x="3" y="3" width="122" height="122" rx="24" fill="#F2EBDD" stroke="#CFC6B5" stroke-width="3"/>
+<path d="M15 107h99" stroke="#BE8A73" stroke-width="5" stroke-linecap="round"/>
+<text x="63" y="86" text-anchor="middle" fill="#365D5E" font-family="Georgia,DejaVu Serif,serif" font-weight="700" font-size="69" letter-spacing="-10">SK</text>
+<circle cx="106" cy="28" r="7" fill="#B98269"/>
+</svg>

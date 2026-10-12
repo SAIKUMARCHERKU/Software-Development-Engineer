@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="SK Spidey Side emblem">
+<defs><radialGradient id="bg"><stop offset="0" stop-color="#4A172B"/><stop offset=".8" stop-color="#121A2C"/><stop offset="1" stop-color="#091321"/></radialGradient></defs>
+<rect x="3" y="3" width="122" height="122" rx="26" fill="url(#bg)" stroke="#CE3752" stroke-width="4"/>
+<g fill="none" stroke="#E94864" opacity=".48" stroke-width="2.3">
+  <path d="M64 9v20M64 99v20M10 64h22M97 64h21M20 20l22 22M86 86l22 22M108 20L86 42M42 86l-22 22"/>
+  <path d="M25 64Q40 38 64 30Q88 38 103 64Q88 90 64 98Q40 90 25 64Z"/>
+  <path d="M34 34Q64 54 94 34M34 94Q64 74 94 94"/>
+</g>
+<path d="M33 49l14-11h36l14 11" fill="none" stroke="#FF6779" stroke-width="2" opacity=".68"/>
+<text x="64" y="80" fill="#FFF7F9" text-anchor="middle" font-family="DejaVu Sans,Arial,sans-serif" font-size="45" font-weight="800" letter-spacing="-5">SK</text>
+</svg>
